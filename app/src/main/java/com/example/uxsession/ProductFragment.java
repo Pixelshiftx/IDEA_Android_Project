@@ -46,6 +46,7 @@ public class ProductFragment extends Fragment {
         return contentView;
     }
 
+    //Set the necessary variables to the listview
     private class CustomAdapter extends BaseAdapter {
 
         public CustomAdapter(List<String> list) {
@@ -83,7 +84,7 @@ public class ProductFragment extends Fragment {
         }
     }
 
-    //get position of item on listview click
+    //Get position of item on listview click
     protected void OpenDetails(int position)
     {
         View view = getLayoutInflater().inflate(R.layout.product_layout, null);
@@ -92,8 +93,6 @@ public class ProductFragment extends Fragment {
         price = view.findViewById(R.id.productPrice);
         image = view.findViewById(R.id.productImage);
         Intent intent = new Intent(getActivity(), ProductDetails.class);
-        String order = Integer.toString(position);
-        intent.putExtra("row",order);
         intent.putExtra("position",position);
         startActivity(intent);
     }

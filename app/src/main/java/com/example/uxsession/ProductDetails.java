@@ -48,6 +48,7 @@ public class ProductDetails extends AppCompatActivity {
         });
     }
 
+    //get purchase quantity
     public int getQuantity(String quantity)
     {
         try{
@@ -57,6 +58,7 @@ public class ProductDetails extends AppCompatActivity {
             return 0;
         }
     }
+    //open dialog box
     public void openDialogue(int quantity)
     {
         PurchaseDialog purchaseDialog = new PurchaseDialog(quantity);

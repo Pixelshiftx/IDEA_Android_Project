@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import java.util.Objects;
+
 public class AboutFragment extends Fragment {
 
     @Override
@@ -19,6 +21,8 @@ public class AboutFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_about, container, false);
 
     }
+
+    //view pager adapter
     private ViewPager2 mViewPager;
     @Override
 
@@ -30,7 +34,7 @@ public class AboutFragment extends Fragment {
 
         TabLayout tabLayout = view.findViewById(R.id.tabMenu);
         new TabLayoutMediator(tabLayout, mViewPager,
-                (tab, position) -> tab.setText(((AboutAdapter)(mViewPager.getAdapter())).mFragmentNames[position])
+                (tab, position) -> tab.setText(((AboutAdapter)(Objects.requireNonNull(mViewPager.getAdapter()))).mFragmentNames[position])
         ).attach();
     }
 }

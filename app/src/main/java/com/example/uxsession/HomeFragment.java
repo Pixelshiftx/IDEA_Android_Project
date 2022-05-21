@@ -21,7 +21,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        //set username
+        //Set username
         TextView userNameDisplay;
         String userName = null;
         View view= inflater.inflate(R.layout.fragment_home, container, false);
@@ -33,11 +33,12 @@ public class HomeFragment extends Fragment {
         }
         userNameDisplay.setText(userName+'!');
 
-        //image slider buttons
+        //Image slider buttons
         ImageButton previous,next;
         previous = (ImageButton) view.findViewById(R.id.previousImage);
         next =(ImageButton) view.findViewById(R.id.nextImage);
 
+        //View Flipper config
         ViewFlipper viewFlipper;
         viewFlipper = (ViewFlipper) view.findViewById(R.id.viewFlipper);
         viewFlipper.setInAnimation(this.getContext(),android.R.anim.slide_in_left);
@@ -45,7 +46,7 @@ public class HomeFragment extends Fragment {
         viewFlipper.setFlipInterval(5000);
         viewFlipper.startFlipping();
 
-
+        //Click previous button
         previous.setOnClickListener(v -> {
             viewFlipper.setInAnimation(this.getContext(),android.R.anim.slide_in_left);
             viewFlipper.setOutAnimation(this.getContext(),android.R.anim.slide_out_right);
@@ -57,6 +58,7 @@ public class HomeFragment extends Fragment {
 
         });
 
+        //Click next button
         next.setOnClickListener(v -> {
             viewFlipper.setInAnimation(this.getContext(),R.anim.slide_in_right);
             viewFlipper.setOutAnimation(this.getContext(),R.anim.slide_out_left);
@@ -66,8 +68,7 @@ public class HomeFragment extends Fragment {
             viewFlipper.startFlipping();
         });
 
-        //input data
-
+        //Input data for the carousel
         TextView name1,name2,name3,name4;
         TextView type1,type2,type3,type4;
         ImageView image1,image2,image3,image4;

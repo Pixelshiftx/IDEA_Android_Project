@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         findViews();
 
-        //if input is fulfilled
+        //login button click
         loginB.setOnClickListener(v -> {
             if (CheckInputs())
             {
@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
             errMsg.setText("Username length must be between 8 and 24!");
             return false;
         }
+
         else if (passLog.length() == 0) {
             errMsg.setVisibility(View.VISIBLE);
             passLog.setError("Password must be filled!");

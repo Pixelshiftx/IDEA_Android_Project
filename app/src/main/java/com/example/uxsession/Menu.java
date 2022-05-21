@@ -18,28 +18,29 @@ public class Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
-        //get username from MainActivity
+        //Get username from MainActivity
         String namePass = getIntent().getStringExtra("UserName");
         Bundle getUsername = new Bundle();
 
-        //pass to HomeFragment
+        //Pass username to HomeFragment
         getUsername.putString("uName", namePass);
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        //set Home Fragment as default
+        //Set Home Fragment as default
         HomeFragment homeFragment = new HomeFragment();
         homeFragment.setArguments(getUsername);
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, homeFragment).commit();
     }
 
+    //navigation bar when clicked
     private final BottomNavigationView.OnNavigationItemSelectedListener navListener =
             item ->
             {
                 Fragment selectedFragment = null;
                 switch (item.getItemId())
                 {
-                        //Home button
+                        //Home Button
                     case R.id.homePage:
                         String namePass = getIntent().getStringExtra("UserName");
                         Bundle getUsername = new Bundle();

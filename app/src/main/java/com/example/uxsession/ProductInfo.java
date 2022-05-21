@@ -2,7 +2,7 @@ package com.example.uxsession;
 
 public class ProductInfo {
 
-    //details regarding furniture are kept here
+    //Details regarding the products are kept here
 
     public static String[]name =
             {"CHAIRBLE","BRAUN","FLYG","THOR","SOFA","KAPPBOD","OSLO"};
