@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:background="#f1f5f9"
+        android:id="@+id/homePage"
+        android:icon = "@drawable/home_icon"
+        android:title ="Home"/>
+    <item
+        android:background="#f1f5f9"
+        android:id="@+id/productPage"
+        android:icon = "@drawable/product_icon"
+        android:title ="Products"/>
+    <item
+        android:background="#f1f5f9"
+        android:id="@+id/aboutPage"
+        android:icon = "@drawable/about_icon"
+        android:title ="About"/>
+    <item
+        android:background="#f1f5f9"
+        android:id="@+id/mainActivity"
+        android:icon = "@drawable/logout_icon"
+        android:title ="Log Out"/>
+</menu>
